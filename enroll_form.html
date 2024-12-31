@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Client Form</title>
+    <link rel="stylesheet" href="css/enroll.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "5Rd_18xtzUoXDJ9YA",
+      });
+   })();
+</script>
+
+    <!-- Link to external CSS file -->
+  </head>
+  <body>
+    <!-- Header -->
+
+    <!-- Form Section -->
+    <div class="container">
+      <form class="registration-form" action="submit-form" method="POST">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">What is your name? *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+          <label for="number">Phone Number *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+          />
+        </div>
+
+        <!-- Current Weight -->
+        <div class="form-group">
+          <label for="weight">What is your current weight in kg? *</label>
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            required
+          />
+        </div>
+
+        <!-- Height -->
+        <div class="form-group">
+          <label for="height">What is your height in cm? *</label>
+          <input
+            type="number"
+            id="height"
+            name="height"
+            required
+          />
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+          <label for="age">What is your age?</label>
+          <input type="number" id="age" name="age" min="10" max="100" />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <label for="gender">What is your Gender?</label>
+          <div class="checkbox-group">
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label><br />
+          </div>
+        </div>
+
+        <!-- Fitness Goals -->
+        <div class="form-group">
+          <label for="fitness-goals"
+            >What are your primary fitness goals? *</label
+          >
+          <div class="checkbox-group">
+            <input
+              type="radio"
+              id="cutting"
+              name="fitness-goals"
+              value="Cutting"
+            />
+            <label for="cutting">Cutting (Fat loss)</label><br />
+
+            <input
+              type="radio"
+              id="lean-bulk"
+              name="fitness-goals"
+              value="Lean Bulk"
+            />
+            <label for="lean-bulk">Lean Bulk (Muscle Gain)</label><br />
+
+            <input
+              type="radio"
+              id="body-recomposition"
+              name="fitness-goals"
+              value="Body Recomposition"
+            />
+            <label for="body-recomposition">Body Recomposition</label><br />
+
+            <input
+              type="radio"
+              id="super-bulk"
+              name="fitness-goals"
+              value="Super Bulk"
+            />
+            <label for="super-bulk">Super Bulk</label><br />
+
+            <input
+              type="radio"
+              id="general-health"
+              name="fitness-goals"
+              value="General Health"
+            />
+            <label for="general-health">General Health</label><br />
+
+            <input type="radio" id="other" name="fitness-goals" value="Other" />
+            <label for="other">Other</label>
+          </div>
+        </div>
+
+        <!-- Workout Frequency -->
+        <div class="form-group">
+          <label for="workout-frequency"
+            >How many days per week are you available to work out?</label
+          >
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="1-2-days"
+              name="workout-frequency"
+              value="1-2"
+            />
+            <label for="1-2-days">1-2</label><br />
+
+            <input
+              type="radio"
+              id="3-4-days"
+              name="workout-frequency"
+              value="3-4"
+            />
+            <label for="3-4-days">3-4</label><br />
+
+            <input
+              type="radio"
+              id="5-plus-days"
+              name="workout-frequency"
+              value="5+"
+            />
+            <label for="5-plus-days">5+</label>
+          </div>
+        </div>
+
+        <!-- Sleep Hours -->
+        <div class="form-group">
+          <label for="sleep"
+            >How much sleep do you typically get each night?</label
+          >
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="less-than-5"
+              name="sleep"
+              value="Less than 5 hours"
+            />
+            <label for="less-than-5">Less than 5 hours</label><br />
+
+            <input type="radio" id="5-7-hours" name="sleep" value="5–7 hours" />
+            <label for="5-7-hours">5–7 hours</label><br />
+
+            <input
+              type="radio"
+              id="7-plus-hours"
+              name="sleep"
+              value="7+ hours"
+            />
+            <label for="7-plus-hours">7+ hours</label>
+          </div>
+        </div>
+
+        <!-- Medical Conditions -->
+        <div class="form-group">
+          <label
+            >Do you have any medical conditions? (e.g., asthma, diabetes,
+            hypertension) *</label
+          >
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="medical-yes"
+              name="medical"
+              value="Yes"
+              required
+            />
+            <label for="medical-yes">Yes</label><br />
+
+            <input
+              type="radio"
+              id="medical-no"
+              name="medical"
+              value="No"
+              required
+            />
+            <label for="medical-no">No</label>
+          </div>
+        </div>
+
+        <!-- Injuries or Surgeries -->
+        <div class="form-group">
+          <label>Have you had any recent injuries or surgeries?</label>
+          <div class="radio-group">
+            <input type="radio" id="injury-yes" name="injury" value="Yes" />
+            <label for="injury-yes">Yes</label><br />
+
+            <input type="radio" id="injury-no" name="injury" value="No" />
+            <label for="injury-no">No</label>
+          </div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">What is your email address?</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input_field"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/enroll_form.js"></script>
+  </body>
+</html>
