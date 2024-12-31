@@ -4,6 +4,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+.back-button {
+    display: inline-block;
+    padding: 15px 30px; 
+    background-color: rgba(0, 0, 0, 0.606); /* A slightly more vibrant blue */
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Add some weight */
+    border-radius: 8px; 
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .back-button:hover {
+    background-color: grey; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
 
 body {
     font-family: Arial, sans-serif;
