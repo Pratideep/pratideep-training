@@ -1,5 +1,9 @@
-const enrollBtn = document.getElementById("enroll_btn");
+const enrollBtns = document.querySelectorAll(".enroll_btn");
 
-enrollBtn.addEventListener("click",(e)=>{
+function enrollFunc(){
     window.location.href = "enroll_form.html";
+}
+
+enrollBtns.forEach((i)=>{
+    i.addEventListener('click',enrollFunc);
 });
