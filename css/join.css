@@ -28,6 +28,22 @@ header p {
     justify-content: center;
     padding: 20px;
 }
+/* Add this to your CSS file */
+.original-price {
+    text-decoration: line-through;
+    color: #999; /* Light gray for the crossed-out price */
+    margin-right: 10px;
+  }
+  
+  .price {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .price .original-price {
+    font-size: 1em;
+  }
+  
 
 .plans {
     display: flex;

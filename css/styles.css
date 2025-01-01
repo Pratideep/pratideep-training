@@ -55,6 +55,7 @@
   cursor: pointer;
 }
 .btn {
+
   padding: 0.75rem 1.5rem;
   outline: none;
   border: none;
@@ -66,8 +67,22 @@
   cursor: pointer;
 
 }
+.btn_jn{
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
 
 
+.btn_jn:hover {
+  background-color: var(--primary-color);
+}
 .btn:hover {
   background-color: var(--primary-color);
 }
@@ -354,7 +369,7 @@ nav {
 }
 
 .popular__card:hover span {
-  transform: translateX(10px);
+  /* transform: translateX(10px); */
 }
 
 .popular__card p {
@@ -536,7 +551,7 @@ nav {
 
 @media (width > 768px) {
 
-  .btn_join {
+  .btn_jn {
     display: none;
   }
   
