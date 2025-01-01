@@ -47,6 +47,41 @@ header p {
     transition: transform 0.2s;
 }
 
+.plan {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px; /* Ensure spacing between cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visual appeal */
+  }
+  
+  .offer-tag {
+    position: absolute;
+    top: -10px; /* Position above the plan card */
+    right: -10px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2; /* To avoid text overlap */
+    z-index: 10; /* Ensure it stays on top */
+  }
+  
+  .offer-tag small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: normal;
+    margin-top: 3px;
+  }
+  
+
 .plan:hover {
     transform: translateY(-10px);
 }
