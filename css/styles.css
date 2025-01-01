@@ -140,10 +140,42 @@ nav {
 }
 
 .nav__menu__btn {
-  font-size: 1.5rem;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  font-size: 15px;
   color: var(--white);
   cursor: pointer;
+  background: linear-gradient(45deg, #bc705e, #feb47b); 
+  padding: 0.5rem 1rem; /* Spacing around the button */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
+
+.nav__menu__btn .menu-text {
+  margin-right: 1rem; /* Space between text and icon */
+}
+
+.nav__menu__btn:hover {
+  background: linear-gradient(45deg, #feb47b, #ff7e5f);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.nav__menu__btn i {
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
 
 .nav__links {
   position: absolute;

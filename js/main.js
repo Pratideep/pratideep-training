@@ -3,6 +3,7 @@ const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 const expoBtn = document.getElementById("explore_btn");
 const joinBtns = document.querySelectorAll(".join_btn");
+
 // const joinBtn2 = document.getElementById("join_btn2");
 
 menuBtn.addEventListener("click", (e) => {
@@ -29,8 +30,11 @@ joinBtns.forEach((i) => {
 // })
 
 navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
+  if (e.target.tagName === "A") {
+    // Only remove the "open" class if a link is clicked.
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  }
 });
 
 const scrollRevealOption = {
