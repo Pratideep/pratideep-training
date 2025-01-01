@@ -2,8 +2,8 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 const expoBtn = document.getElementById("explore_btn");
-const joinBtn = document.getElementById("join_btn");
-const joinBtn2 = document.getElementById("join_btn2");
+const joinBtns = document.querySelectorAll(".join_btn");
+// const joinBtn2 = document.getElementById("join_btn2");
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -15,12 +15,18 @@ menuBtn.addEventListener("click", (e) => {
 expoBtn.addEventListener("click",(e)=>{
   window.location.href="about.html"
 })
-joinBtn.addEventListener('click',(e)=>{
-  window.location.href="join.html"
-})
-joinBtn2.addEventListener('click',(e)=>{
-  window.location.href="join.html"
-})
+
+function redirectToPage() {
+  window.location.href = "join.html";
+}
+
+joinBtns.forEach((i) => {
+  i.addEventListener('click',redirectToPage);
+});
+
+// joinBtn2.addEventListener('click',(e)=>{
+//   window.location.href="join.html"
+// })
 
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
