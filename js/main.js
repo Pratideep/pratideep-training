@@ -3,6 +3,7 @@ const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 const expoBtn = document.getElementById("explore_btn");
 const joinBtns = document.querySelectorAll(".join_btn");
+const clientBtns = document.querySelector(".clinet_btn2");
 
 // const joinBtn2 = document.getElementById("join_btn2");
 
@@ -15,6 +16,10 @@ menuBtn.addEventListener("click", (e) => {
 
 expoBtn.addEventListener("click",(e)=>{
   window.location.href="about.html"
+})
+
+clientBtns.addEventListener("click",(e)=>{
+  window.location.href="client.html"
 })
 
 function redirectToPage() {
