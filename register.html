@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register for Lookmaxing Plan</title>
+    <link rel="stylesheet" href="css/lookmax.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="js/look_max.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Register for Lookmaxing Plan</h1>
+      <p>Join us to enhance your appearance and confidence!</p>
+    </header>
+
+    <main>
+      <section class="registration-form">
+        <h2>Sign Up</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <!-- <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required />
+                </div> -->
+
+          <div class="form-group">
+            <label for="goal">Lookmaxing Goal:</label>
+            <textarea id="goal" name="goal" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="skin-type">Skin Type:</label>
+            <select id="skin-type" name="skin-type" required>
+              <option value="">Select your skin type</option>
+              <option value="oily">Oily</option>
+              <option value="dry">Dry</option>
+              <option value="combination">Combination</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hair-type">Hair Type and Color:</label>
+            <input
+              type="text"
+              id="hair-type"
+              name="hair-type"
+              placeholder="e.g., Straight, Curly, Black"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="skin-concerns">Skin Concerns:</label>
+            <select id="skin-concerns" name="skin-concerns" required>
+              <option value="">Select your skin concerns</option>
+              <option value="acne">Acne</option>
+              <option value="dark-spots">Dark Spots</option>
+              <option value="dry-skin">Dry Skin</option>
+              <option value="oily-skin">Oily Skin</option>
+              <option value="sensitive-skin">Sensitive Skin</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="">Register Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Lookmaxing Showcase By Pratideep Naik. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
