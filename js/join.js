@@ -1,9 +1,11 @@
-const enrollBtns = document.querySelectorAll(".enroll_btn");
+document.addEventListener("DOMContentLoaded", function () {
+    const enrollBtn = document.querySelector(".enroll_btn");
 
-function enrollFunc(){
-    window.location.href = "enroll_form.html";
-}
-
-enrollBtns.forEach((i)=>{
-    i.addEventListener('click',enrollFunc);
+    if (enrollBtn) {
+        enrollBtn.addEventListener("click", function () {
+            window.location.assign("enroll_form.html"); // Alternative to window.location.href
+        });
+    } else {
+        console.error("Enroll button not found!");
+    }
 });

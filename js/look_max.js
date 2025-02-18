@@ -26,22 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Log the data to the console (for testing)
       console.log("Form Data:", formData);
   
-      // You can send this data to a server or use it as needed
-      // For example, sending it via a POST request:
-      // fetch('/your-server-endpoint', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //   console.log('Success:', data);
-      // })
-      // .catch(error => {
-      //   console.error('Error:', error);
-      // });
 
       const isValid = formData.name && formData.email && formData.goal && formData.skinType && formData.skinConcerns;
 
